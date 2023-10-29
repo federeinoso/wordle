@@ -17,9 +17,10 @@ function Game() {
     const nextGuesses = [...guesses, tentativeGuess];
     return setGuesses(nextGuesses);
   }
+
   return (
     <>
-      <GuessResults guesses={guesses} />
+      <GuessResults guesses={guesses} answer={answer} />
       <GuessInput handleSubmitGuesses={handleSubmitGuesses} />
     </>
   );
